@@ -14,7 +14,8 @@ gender_dist = table(df$Gender)
 barplot(gender_dist)
 
 exited_dist = table(df$Exited)
-barplot(exited_freq)
+exited_dist
+barplot(exited_dist)
 
 creditcard_dist = table(df$HasCrCard)
 barplot(creditcard_dist)
@@ -60,7 +61,7 @@ sum(complete.cases(df)) #revisar que la cantidad de observaciones sea la misma
 df = subset(df, select=c("CreditScore", "Geography",	"Gender",	"Age",	"Tenure",	"Balance",
                          "NumOfProducts",	"HasCrCard",	"IsActiveMember",	"EstimatedSalary",
                          "Exited"))
-
+df
 
 df_grouped = group_by(df, Geography)
 
